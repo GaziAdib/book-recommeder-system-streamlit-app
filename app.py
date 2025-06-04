@@ -3,10 +3,10 @@ import pickle
 import numpy as np
 
 # Load pickled files
-model = pickle.load(open("artifacts/model.pkl", "rb"))
-book_names = pickle.load(open("artifacts/book_names.pkl", "rb"))
-final_rating = pickle.load(open("artifacts/final_rating.pkl", "rb"))
-book_pivot = pickle.load(open("artifacts/book_pivot.pkl", "rb"))
+model = pickle.load(open("./artifacts/model.pkl", "rb"))
+book_names = pickle.load(open("./artifacts/book_names.pkl", "rb"))
+final_rating = pickle.load(open("./artifacts/final_rating.pkl", "rb"))
+book_pivot = pickle.load(open("./artifacts/book_pivot.pkl", "rb"))
 
 def fetch_book_info(book_title):
     """Fetch image URLs based on book title"""
@@ -44,5 +44,5 @@ if st.button("Show Recommendations"):
         
         cols = st.columns(5)
         for idx, col in enumerate(cols[:len(recommendations)]):
-            col.image(recommendations[idx]['image_url'], use_column_width=True)
+            col.image(recommendations[idx]['image_url'], use_container_width=True)
             col.markdown(f"**{recommendations[idx]['title']}**")
