@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.db
+
+# Environment
+.env
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Streamlit cache
+.streamlit/
+
+# Logs
+*.log
